@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Muhammad Latif - Senior DevOps & Cloud Architect with 10+ years building mission-critical infrastructure across AWS, Azure, and Kubernetes. Available for roles in UAE/EU.">
+    <meta name="og:title" content="Muhammad Latif | Senior DevOps & Cloud Architect">
+    <meta name="og:description" content="AWS & Azure · Kubernetes · Terraform · 10+ years building production infrastructure that scales, secures, and saves costs.">
+    <meta name="theme-color" content="#6496ff">
+    <title>Muhammad Latif | Senior DevOps & Cloud Architect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(15, 15, 30, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(100, 150, 255, 0.1);
+            z-index: 50;
+            padding: 1rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #6496ff 0%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a {
+            background: none;
+            border: none;
+            color: #a0a0a0;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s;
+            text-transform: capitalize;
+        }
+
+        .nav-links a:hover {
+            color: #00d4ff;
+        }
+
+        .nav-links a.active {
+            color: #00d4ff;
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 2rem;
+            background: linear-gradient(180deg, rgba(100, 150, 255, 0.05) 0%, transparent 100%);
+            border-bottom: 1px solid rgba(100, 150, 255, 0.1);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            color: #00d4ff;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero .description {
+            font-size: 1rem;
+            color: #a0a0a0;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #6496ff 0%, #00d4ff 100%);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(100, 150, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(100, 150, 255, 0.15);
+            border: 1px solid rgba(100, 150, 255, 0.3);
+            color: #e0e0e0;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(100, 150, 255, 0.25);
+            border-color: rgba(100, 150, 255, 0.5);
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .stat {
+            padding: 1.5rem;
+            background: rgba(100, 150, 255, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(100, 150, 255, 0.2);
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #00d4ff;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #a0a0a0;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 4rem 2rem;
+        }
+
+        section.alt {
+            background: rgba(100, 150, 255, 0.05);
+            border-top: 1px solid rgba(100, 150, 255, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: #e0e0e0;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #e0e0e0;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #00d4ff;
+            margin-bottom: 1rem;
+        }
+
+        /* About Section */
+        .about-box {
+            background: rgba(100, 150, 255, 0.08);
+            border: 1px solid rgba(100, 150, 255, 0.15);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .about-box p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #d0d0d0;
+            margin-bottom: 1rem;
+        }
+
+        .about-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .cert-item {
+            padding: 1rem;
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 6px;
+            color: #00d4ff;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Expertise Grid */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .expertise-card {
+            padding: 1.5rem;
+            background: rgba(15, 15, 30, 0.8);
+            border: 1px solid rgba(100, 150, 255, 0.2);
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .expertise-card:hover {
+            border-color: rgba(0, 212, 255, 0.5);
+            background: rgba(15, 15, 30, 0.95);
+        }
+
+        .expertise-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .expertise-card li {
+            color: #d0d0d0;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .expertise-card li:before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            color: #6496ff;
+        }
+
+        /* Tech Stack */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .tech-item {
+            padding: 1.2rem;
+            background: linear-gradient(135deg, rgba(100, 150, 255, 0.15) 0%, rgba(0, 212, 255, 0.05) 100%);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 8px;
+        }
+
+        .tech-category {
+            font-size: 0.85rem;
+            color: #6496ff;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .tech-list {
+            font-size: 0.95rem;
+            color: #e0e0e0;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            padding: 1.5rem;
+            background: rgba(15, 15, 30, 0.8);
+            border: 1px solid rgba(100, 150, 255, 0.2);
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: rgba(0, 212, 255, 0.5);
+            background: rgba(15, 15, 30, 0.95);
+        }
+
+        .project-card h4 {
+            margin-bottom: 0.8rem;
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            color: #d0d0d0;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            text-align: center;
+        }
+
+        .contact-section p {
+            font-size: 1rem;
+            color: #a0a0a0;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-box {
+            padding: 2rem;
+            background: rgba(100, 150, 255, 0.08);
+            border: 1px solid rgba(100, 150, 255, 0.2);
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(100, 150, 255, 0.1);
+            color: #707070;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">Muhammad Latif</div>
+            <div class="nav-links">
+                <a href="#about" onclick="setActive(event)">About</a>
+                <a href="#expertise" onclick="setActive(event)">Expertise</a>
+                <a href="#stack" onclick="setActive(event)">Stack</a>
+                <a href="#projects" onclick="setActive(event)">Projects</a>
+                <a href="#contact" onclick="setActive(event)">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Senior DevOps & Cloud Architect</h1>
+            <div class="tagline">Building Mission-Critical Infrastructure at Scale</div>
+            <p class="description">
+                10+ years architecting AWS, Azure, and Kubernetes infrastructure for financial services, high-load platforms, and enterprise cloud transformations. Certified in AWS, Azure, and Kubernetes (CKA). Available for full-time, consulting, and remote opportunities in UAE/EU.
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="mailto:muhammad-latif@outlook.com" class="btn btn-primary">
+                    ✉ Get in Touch
+                </a>
+                <a href="#projects" class="btn btn-secondary">
+                    View My Work
+                </a>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">10+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">50+</div>
+                    <div class="stat-label">Projects Delivered</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">15+</div>
+                    <div class="stat-label">Team Size Led</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">99.9%</div>
+                    <div class="stat-label">Uptime SLA</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About</h2>
+            <div class="about-box">
+                <p>I'm a Senior DevOps/Cloud Architect with a proven track record designing, automating, and operating large-scale infrastructure across AWS, Azure, and hybrid environments. My expertise spans cloud-native architectures, Kubernetes orchestration, infrastructure-as-code, DevSecOps practices, and enterprise-grade compliance (PCI-DSS, SOC2).</p>
+                <p>I specialize in building resilient CI/CD pipelines, managing mission-critical Kubernetes clusters, implementing security-first infrastructure, and leading cloud transformations that accelerate development velocity while maintaining operational excellence. I've successfully reduced infrastructure costs by 35%, achieved 99.9% uptime across production systems, and led teams managing infrastructure serving 15 billion+ daily requests.</p>
+            </div>
+
+            <h3>Certifications</h3>
+            <div class="cert-grid">
+                <div class="cert-item">✓ AWS Solutions Architect Associate</div>
+                <div class="cert-item">✓ Kubernetes CKA (CNCF)</div>
+                <div class="cert-item">✓ PCI-DSS Security Certified</div>
+                <div class="cert-item">✓ Azure Infrastructure AZ-104</div>
+                <div class="cert-item">✓ RHCE (Red Hat)</div>
+                <div class="cert-item">✓ CCNA (Cisco)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="alt">
+        <div class="container">
+            <h2>Core Expertise</h2>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <h4>Cloud Platforms</h4>
+                    <ul>
+                        <li>AWS (EKS, ECS, Lambda, VPC)</li>
+                        <li>Azure (AKS, App Service)</li>
+                        <li>Multi-cloud & Hybrid Architecture</li>
+                        <li>CloudFront, Route53, CDN</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <h4>Kubernetes & Containers</h4>
+                    <ul>
+                        <li>EKS/AKS Cluster Management</li>
+                        <li>Docker, Helm, ArgoCD</li>
+                        <li>Pod Orchestration & Autoscaling</li>
+                        <li>Network Policies & Security</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <h4>Infrastructure as Code</h4>
+                    <ul>
+                        <li>Terraform (500+ resources managed)</li>
+                        <li>CloudFormation & ARM Templates</li>
+                        <li>Automated Drift Detection</li>
+                        <li>Version-controlled Deployments</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <h4>CI/CD & DevOps</h4>
+                    <ul>
+                        <li>GitHub Actions, GitLab CI</li>
+                        <li>Jenkins, Bitbucket Pipelines</li>
+                        <li>Deployment Automation</li>
+                        <li>60% Faster Release Cycles</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <h4>Security & Compliance</h4>
+                    <ul>
+                        <li>PCI-DSS 3.2 Certification</li>
+                        <li>AWS WAF & Security Groups</li>
+                        <li>IAM Governance & IRSA</li>
+                        <li>Zero-Trust Architecture</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <h4>Observability</h4>
+                    <ul>
+                        <li>Prometheus, Grafana, Loki</li>
+                        <li>ELK Stack, CloudWatch</li>
+                        <li>Distributed Tracing & APM</li>
+                        <li>10GB+ Daily Log Processing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section id="stack">
+        <div class="container">
+            <h2>Technology Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-category">Cloud</div>
+                    <div class="tech-list">AWS, Azure, GCP, Scaleway</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-category">Kubernetes</div>
+                    <div class="tech-list">EKS, AKS, Helm, ArgoCD</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-category">IaC</div>
+                    <div class="tech-list">Terraform, CloudFormation, Ansible</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-category">CI/CD</div>
+                    <div class="tech-list">GitHub Actions, GitLab CI, Jenkins</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-category">Monitoring</div>
+                    <div class="tech-list">Prometheus, Grafana, Loki, DataDog</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-category">Security</div>
+                    <div class="tech-list">AWS WAF, IRSA, Vault, Snyk</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-category">Scripting</div>
+                    <div class="tech-list">Bash, Python, PowerShell, YAML</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-category">Databases</div>
+                    <div class="tech-list">MySQL, PostgreSQL, MongoDB, Redis</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="alt">
+        <div class="container">
+            <h2>Key Achievements & Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h4>Enterprise Azure-to-AWS Migration</h4>
+                    <p>50+ workloads migrated with zero downtime, implementing comprehensive security controls and multi-account landing zones aligned with AWS Well-Architected Framework.</p>
+                </div>
+                <div class="project-card">
+                    <h4>Multi-Cloud Platform Engineering</h4>
+                    <p>200+ production workloads across AWS/Azure, establishing cross-cloud connectivity, Transit Gateway mesh, and centralized observability serving millions daily.</p>
+                </div>
+                <div class="project-card">
+                    <h4>PCI-DSS Compliance & Security</h4>
+                    <p>Led full PCI-DSS 3.2 certification project, implementing WAF, IRSA, VPC endpoints, zero-trust architecture, and automated vulnerability scanning pipelines.</p>
+                </div>
+                <div class="project-card">
+                    <h4>AI/ML Infrastructure Modernization</h4>
+                    <p>Architected secure AWS Bedrock/SageMaker infrastructure for LLM workloads, migrated from Azure ML with 30% cost reduction and improved security.</p>
+                </div>
+                <div class="project-card">
+                    <h4>Production EKS Management</h4>
+                    <p>50+ microservices with 99.9% uptime, advanced monitoring, auto-scaling strategies, handling 1M+ API calls daily with zero downtime deployments.</p>
+                </div>
+                <div class="project-card">
+                    <h4>GitOps & Automation Initiative</h4>
+                    <p>Implemented ArgoCD-based GitOps workflows, reduced deployment time by 60%, achieved 100% IaC coverage with Terraform and GitHub Actions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container contact-section">
+            <h2>Let's Build Something Remarkable</h2>
+            <p>Open to full-time roles in UAE/EU, consulting, and remote opportunities. Let's discuss how I can contribute to your infrastructure challenges.</p>
+            
+            <div class="contact-links">
+                <a href="mailto:muhammad-latif@outlook.com" class="btn btn-primary">
+                    ✉ Email
+                </a>
+                <a href="https://linkedin.com/in/muhammad-latif-98579933" class="btn btn-secondary">
+                    🔗 LinkedIn
+                </a>
+                <a href="https://github.com" class="btn btn-secondary">
+                    ◇ GitHub
+                </a>
+            </div>
+
+            <div class="contact-box">
+                <p>📍 Based in Karachi, Pakistan | Available for Riyadh, Jeddah, Dubai | Visa sponsorship available</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Muhammad Latif | Senior DevOps & Cloud Architect</p>
+    </footer>
+
+    <script>
+        function setActive(event) {
+            event.preventDefault();
+            const links = document.querySelectorAll('.nav-links a');
+            links.forEach(link => link.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            const target = event.target.getAttribute('href');
+            const section = document.querySelector(target);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Set active link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const links = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            links.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
