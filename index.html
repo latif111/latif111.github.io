@@ -101,7 +101,10 @@
             padding-bottom: 0.25rem;
         }
 
-        .nav-links a:hover,
+        .nav-links a:hover {
+            color: #00d4ff;
+        }
+
         .nav-links a.active {
             color: #00d4ff;
             border-bottom-color: #00d4ff;
@@ -575,11 +578,11 @@
             <div class="nav-container">
                 <div class="nav-logo">Muhammad Latif</div>
                 <div class="nav-links">
-                    <a href="#about" onclick="setActive(event)">About</a>
-                    <a href="#services" onclick="setActive(event)">Services</a>
-                    <a href="#stack" onclick="setActive(event)">Stack</a>
-                    <a href="#projects" onclick="setActive(event)">Projects</a>
-                    <a href="#contact" onclick="setActive(event)">Get in touch</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#stack">Stack</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Get in touch</a>
                 </div>
             </div>
         </nav>
@@ -861,14 +864,7 @@
             canvas.height = window.innerHeight;
         });
 
-        // Navigation active link
-        function setActive(event) {
-            event.preventDefault();
-            const links = document.querySelectorAll('.nav-links a');
-            links.forEach(link => link.classList.remove('active'));
-            event.target.classList.add('active');
-        }
-
+        // Update active link on scroll
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section[id]');
             const links = document.querySelectorAll('.nav-links a');
@@ -883,7 +879,8 @@
 
             links.forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === current) {
+                const href = link.getAttribute('href').slice(1);
+                if (href === current) {
                     link.classList.add('active');
                 }
             });
